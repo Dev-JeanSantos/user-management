@@ -27,7 +27,7 @@ class RoleController(
     ): ResponseEntity<RoleResponseDTO>{
         return runCatching {
             logger.info {
-                "[CREATE-ROLE]-[Controller] Starting the saved Category name:[${request.descricao}]"
+                "[CREATE-ROLE]-[Controller] Starting the saved Category name:[${request.description}]"
             }
             ResponseEntity(
                 roleService.saved(roleMapper.toRequestDTOForEntity(request)),

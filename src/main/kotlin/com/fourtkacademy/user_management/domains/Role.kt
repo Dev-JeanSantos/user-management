@@ -10,7 +10,8 @@ data class Role(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long,
-    val descricao: String,
+    val name: String,
+    val description: String,
     val creationDate  : LocalDateTime,
     val updateDate  : LocalDateTime? = null
 )

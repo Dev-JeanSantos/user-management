@@ -17,7 +17,7 @@ class IUserService(
 
     override fun saved(request: Role): RoleResponseDTO {
         logger.info { "[CREATE-ROLE]-[Service] Starting create role " +
-                "Role Name:[${request.descricao}]"}
+                "Role Name:[${request.name}]"}
 
         roleRepository.save(request)
         return RoleResponseDTO(message = "Category created successfully")
